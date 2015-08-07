@@ -1,0 +1,1 @@
+Log.d("Deb", String.valueOf(indexOfTile));

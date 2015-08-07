@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Theme15" parent="@android:style/Theme.Black">
+        <item name="android:background">#ff000000</item>
+        <item name="android:textColor">#F0E68C</item>
+        <item name="android:buttonStyle">@style/Button15Style</item>
+    </style>
+
+    <style name="Button15Style" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/button15</item>
+        <item name="android:text"></item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+</resources>
