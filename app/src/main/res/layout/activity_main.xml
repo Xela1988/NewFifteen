@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeLayout"
     android:background="#ffffff"
     android:layout_marginLeft="25dp"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    tools:context=".MainActivity">
 
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/gridLayout"
     android:background="#ffffff"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="50dp"
     android:layout_marginRight="20dp"
-    android:layout_marginStart="20dp"
+    android:orientation="horizontal"
     android:columnCount="4"
-    android:rowCount="5">
+    android:rowCount="5"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true"
+    android:layout_marginTop="99dp">
 
     <Button
         android:text="1"
@@ -31,7 +35,7 @@
         android:layout_gravity="center"
         android:layout_width="55dp"
         android:id="@+id/button2"
-        android:background="@drawable/redbutton00"
+        android:background="@drawable/orangebutton00"
         style="@style/Base.Widget.AppCompat.Button"/>
     <Button
         android:text="3"
@@ -44,7 +48,7 @@
         android:text="4"
         android:layout_gravity="center"
         android:layout_width="55dp"
-        android:background="@drawable/redbutton00"
+        android:background="@drawable/orangebutton00"
         android:id="@+id/button4"
         style="@style/Widget.AppCompat.Button"/>
     <Button
@@ -59,7 +63,7 @@
         android:id="@+id/button6"
         android:layout_gravity="center"
         android:layout_width="55dp"
-        android:background="@drawable/redbutton00"
+        android:background="@drawable/orangebutton00"
         style="@style/Widget.AppCompat.Button"/>
     <Button
         android:text="7"
@@ -73,7 +77,7 @@
         android:id="@+id/button8"
         android:layout_gravity="center"
         android:layout_width="55dp"
-        android:background="@drawable/redbutton00"
+        android:background="@drawable/orangebutton00"
         style="@style/Widget.AppCompat.Button"/>
     <Button
         android:text="9"
@@ -87,7 +91,7 @@
         android:layout_gravity="center"
         android:layout_width="55dp"
         android:id="@+id/button10"
-        android:background="@drawable/redbutton00"
+        android:background="@drawable/orangebutton00"
         style="@style/Widget.AppCompat.Button"/>
     <Button
         android:text="11"
@@ -101,7 +105,7 @@
         android:layout_gravity="center"
         android:layout_width="55dp"
         android:id="@+id/button12"
-        android:background="@drawable/redbutton00"
+        android:background="@drawable/orangebutton00"
         style="@style/Widget.AppCompat.Button"/>
     <Button
         android:text="13"
@@ -115,7 +119,7 @@
         android:id="@+id/button14"
         android:layout_gravity="center"
         android:layout_width="55dp"
-        android:background="@drawable/redbutton00"
+        android:background="@drawable/orangebutton00"
         style="@style/Widget.AppCompat.Button"/>
     <Button
         android:text="15"
@@ -125,8 +129,9 @@
         android:background="@drawable/orangebutton00"
         style="@style/Widget.AppCompat.Button"/>
     <Button
+
         android:id="@+id/button16"
-        android:background="#ffffff"
+        android:background="@drawable/orangebutton00"
         android:layout_gravity="center"
         android:layout_width="55dp"
         style="@style/Widget.AppCompat.Button" />
