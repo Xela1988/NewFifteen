@@ -1,17 +1,86 @@
 <resources>
+    <color name="bgColorText">#ff484848</color><!-- 404040, 333355, 555555 -->
+    <color name="bgColorLight">#ff585858</color>
+    <color name="textColor">#ffffffff</color>
+    <color name="textColorDimBlendWhite">#ccffffff</color>
+    <color name="textColorPrimary">#ff282828</color>
 
+    <style name="Theme.AppBaseTheme" parent="@android:style/Theme.Light">
+        <item name="android:colorBackground">#ff484848</item>
+    </style>
+
+    <style name="button" parent="@android:style/Widget.Button">
+        <item name="android:typeface">sans</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:shadowColor">#ff333333</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:textSize">14sp</item>
+        <!-- <item name="android:textStyle">bold</item> -->
+        <item name="android:background">@drawable/orangebutton00</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_margin">2dip</item>
+    </style>
+
+    <style name="ChessTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="ChessTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="imageButton" parent="@android:style/Widget.ImageButton">
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:background">@drawable/orangebutton00</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_margin">2dip</item>
+    </style>
+
+    <style name="MySmallTextStyle">
+        <item name="android:paddingTop">1dp</item>
+        <item name="android:paddingBottom">1dp</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="CaptureImageStyle">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">30dp</item>
+    </style>
+    <style name="CaptureTextStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_height">wrap_content</item><!-- 14dip -->
+        <item name="android:layout_width">30dp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">10sp</item>
+        <!-- <item name="android:textStyle">bold</item> -->
+        <item name="android:shadowColor">#ff000000</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">2.0</item>
+    </style>
+    <style name="CaptureTextStyleSmall" parent="@style/CaptureTextStyle">
+        <item name="android:layout_width">16dp</item>
+        <item name="android:layout_marginLeft">0dp</item>
+    </style>
+    <style name="MyRowStyle">
+        <item name="android:background">@color/bgColorText</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
-    <style name="bntStyle">
-        <item name="android:layout_columnWeight">1</item>
-        <item name="android:layout_rowWeight">1</item>
-        <item name="android:textSize">40dp</item>
     </style>
 
 </resources>
