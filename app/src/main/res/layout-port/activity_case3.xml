@@ -125,15 +125,16 @@
         android:layout_height="wrap_content"
         android:text="Save"
         android:id="@+id/buttonSave"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/gridLayout3"
         android:layout_alignParentStart="true" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LOAD"
         android:id="@+id/buttonLoad"
-        android:layout_below="@+id/buttonSave"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="63dp" />
 
 
 </RelativeLayout>
