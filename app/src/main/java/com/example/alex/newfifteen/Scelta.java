@@ -14,6 +14,7 @@ public class Scelta extends Activity implements View.OnClickListener {
    protected Button buttonScelta3;
    protected Button buttonScelta4;
     protected Button buttonScelta5;
+    protected Button buttonScelta6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,8 @@ public class Scelta extends Activity implements View.OnClickListener {
         buttonScelta4.setOnClickListener(this);
         Button buttonScelta5 = (Button) findViewById(R.id.buttonScelta5);
         buttonScelta5.setOnClickListener(this);
+        Button buttonScelta6 = (Button) findViewById(R.id.buttonScelta6);
+        buttonScelta6.setOnClickListener(this);
     }
 
 
@@ -51,7 +54,10 @@ public class Scelta extends Activity implements View.OnClickListener {
                 Intent intent2 = new Intent(Scelta.this, Case5.class);
                 startActivity(intent2);
                 break;
-
+            case R.id.buttonScelta6:
+                Intent intent3 = new Intent(Scelta.this, Case6.class);
+                startActivity(intent3);
+break;
 
             default:
                 break;
