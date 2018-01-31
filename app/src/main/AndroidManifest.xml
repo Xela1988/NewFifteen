@@ -11,7 +11,8 @@
 
         <meta-data android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -19,19 +20,28 @@
         </activity>
         <activity
             android:label="Sfida NewEight"
-            android:name=".Case3" >
+            android:name=".Case3"
+            android:screenOrientation="landscape">
         </activity>
         <activity
             android:label="Sfida NewFifteen"
-            android:name=".Case4" >
+            android:name=".Case4"
+            android:screenOrientation="landscape">
         </activity>
         <activity
             android:label="Sfida NewTwentyfour"
-            android:name=".Case5" >
+            android:name=".Case5"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:label="Sfida NewThirtyfive"
+            android:name=".Case6"
+            android:screenOrientation="landscape">
         </activity>
         <activity
             android:label="Difficoltà"
-            android:name=".Scelta" >
+            android:name=".Scelta"
+            android:screenOrientation="landscape">
         </activity>
 
     </application>
