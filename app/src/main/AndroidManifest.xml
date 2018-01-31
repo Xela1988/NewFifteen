@@ -22,12 +22,16 @@
             android:name=".Case3" >
         </activity>
         <activity
-            android:label="Sfida NewFifteen"
+            android:label="Challenge NewFifteen"
             android:name=".Case4" >
         </activity>
         <activity
-            android:label="Sfida NewTwentyfour"
+            android:label="Challenge NewTwentyfour"
             android:name=".Case5" >
+        </activity>
+        <activity
+            android:label="Sfida NewThirtyfive"
+            android:name=".Case6" >
         </activity>
         <activity
             android:label="Difficoltà"
