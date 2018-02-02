@@ -11,8 +11,8 @@ import android.widget.Button;
  * Created by Alex on 26/10/2017.
  */
 public class Scelta extends Activity implements View.OnClickListener {
-   protected Button buttonScelta3;
-   protected Button buttonScelta4;
+    protected Button buttonScelta3;
+    protected Button buttonScelta4;
     protected Button buttonScelta5;
     protected Button buttonScelta6;
 
@@ -57,7 +57,7 @@ public class Scelta extends Activity implements View.OnClickListener {
             case R.id.buttonScelta6:
                 Intent intent3 = new Intent(Scelta.this, Case6.class);
                 startActivity(intent3);
-break;
+                break;
 
             default:
                 break;

@@ -4,11 +4,12 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Case4"
-    >
+    android:background="@drawable/sfondo04">
+
+>
 
         <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/gridLayout4"
-            android:background="#ffffff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -16,39 +17,40 @@
             android:rowCount="5"
             android:layout_marginTop="94dp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true">
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@android:color/transparent">
 
             <Button
                 android:text="1"
                 android:layout_gravity="center"
                 android:layout_width="55dp"
                 android:id="@+id/button"
-                android:background="@drawable/orangebutton00"
+                android:background="@drawable/greenbutton00"
                 style="@style/Widget.AppCompat.Button"/>
             <Button
                 android:text="2"
                 android:layout_gravity="center"
                 android:layout_width="55dp"
                 android:id="@+id/button2"
-                android:background="@drawable/orangebutton00"
+                android:background="@drawable/greenbutton00"
                 style="@style/Base.Widget.AppCompat.Button"/>
             <Button
                 android:text="3"
                 android:layout_gravity="center"
                 android:layout_width="55dp"
-                android:background="@drawable/orangebutton00"
+                android:background="@drawable/greenbutton00"
                 android:id="@+id/button3"
                 style="@style/Widget.AppCompat.Button"/>
             <Button
                 android:text="4"
                 android:layout_gravity="center"
                 android:layout_width="55dp"
-                android:background="@drawable/orangebutton00"
+                android:background="@drawable/greenbutton00"
                 android:id="@+id/button4"
                 style="@style/Widget.AppCompat.Button"/>
             <Button
                 android:text="5"
-                android:background="@drawable/orangebutton00"
+                android:background="@drawable/greenbutton00"
                 android:id="@+id/button5"
                 android:layout_gravity="center"
                 android:layout_width="55dp"
@@ -58,13 +60,13 @@
                 android:id="@+id/button6"
                 android:layout_gravity="center"
                 android:layout_width="55dp"
-                android:background="@drawable/orangebutton00"
+                android:background="@drawable/greenbutton00"
                 style="@style/Widget.AppCompat.Button"/>
             <Button
                 android:text="7"
                 android:layout_gravity="center"
                 android:layout_width="55dp"
-                android:background="@drawable/orangebutton00"
+                android:background="@drawable/greenbutton00"
                 android:id="@+id/button7"
                 style="@style/Widget.AppCompat.Button"/>
             <Button
@@ -72,41 +74,41 @@
                 android:id="@+id/button8"
                 android:layout_gravity="center"
                 android:layout_width="55dp"
-                android:background="@drawable/orangebutton00"
+                android:background="@drawable/greenbutton00"
                 style="@style/Widget.AppCompat.Button"/>
             <Button
                 android:text="9"
                 android:id="@+id/button9"
                 android:layout_gravity="center"
                 android:layout_width="55dp"
-                android:background="@drawable/orangebutton00"
+                android:background="@drawable/greenbutton00"
                 style="@style/Widget.AppCompat.Button"/>
             <Button
                 android:text="10"
                 android:layout_gravity="center"
                 android:layout_width="55dp"
-                android:id="@+id/button12"
-                android:background="@drawable/orangebutton00"
+                android:id="@+id/button10"
+                android:background="@drawable/greenbutton00"
                 style="@style/Widget.AppCompat.Button"/>
             <Button
                 android:text="11"
                 android:layout_gravity="center"
                 android:layout_width="55dp"
                 android:id="@+id/button11"
-                android:background="@drawable/orangebutton00"
+                android:background="@drawable/greenbutton00"
                 style="@style/Widget.AppCompat.Button"/>
             <Button
                 android:text="12"
                 android:layout_gravity="center"
                 android:layout_width="55dp"
                 android:id="@+id/button12"
-                android:background="@drawable/orangebutton00"
+                android:background="@drawable/greenbutton00"
                 style="@style/Widget.AppCompat.Button"/>
             <Button
                 android:text="13"
                 android:layout_gravity="center"
                 android:layout_width="55dp"
-                android:background="@drawable/orangebutton00"
+                android:background="@drawable/greenbutton00"
                 android:id="@+id/button13"
                 style="@style/Widget.AppCompat.Button"/>
             <Button
@@ -114,24 +116,24 @@
                 android:id="@+id/button14"
                 android:layout_gravity="center"
                 android:layout_width="55dp"
-                android:background="@drawable/orangebutton00"
+                android:background="@drawable/greenbutton00"
                 style="@style/Widget.AppCompat.Button"/>
             <Button
                 android:text="15"
-                android:id="@+id/button12"
+                android:id="@+id/button15"
                 android:layout_gravity="center"
                 android:layout_width="55dp"
-                android:background="@drawable/orangebutton00"
+                android:background="@drawable/greenbutton00"
                 style="@style/Widget.AppCompat.Button"/>
             <Button
 
                 android:id="@+id/button16"
-                android:background="@drawable/orangebutton00"
+                android:background="@drawable/greenbutton00"
                 android:layout_gravity="center"
                 android:layout_width="55dp"
                 style="@style/Widget.AppCompat.Button" />
             <TextView
-                android:textColor="#bc0d04"
+                android:textColor="#fffdfd"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView"
                 android:layout_row="4"

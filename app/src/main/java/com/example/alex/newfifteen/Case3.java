@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+
 import java.util.ArrayList;
 
 
@@ -36,14 +37,13 @@ public class Case3 extends AppCompatActivity implements View.OnClickListener {
     private ListView mListView;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_case3);
         // modifiche per creazione button Save Load
-        buttonSave = (Button) findViewById(R.id.buttonSave);
-        buttonLoad = (Button) findViewById(R.id.buttonLoad);
+       // buttonSave = (Button) findViewById(R.id.buttonSave);
+      //  buttonLoad = (Button) findViewById(R.id.buttonLoad);
         //prova per caricare eventuali schemi
         mListView = (ListView) findViewById(R.id.text_list_view);
         buttons = new Button[n * n];
@@ -71,9 +71,10 @@ public class Case3 extends AppCompatActivity implements View.OnClickListener {
         textView = (TextView) findViewById(R.id.textView);
     }
 
+
     @Override
     public void onClick(View v) {
-       // String newEntry = editText.getText().toString();
+        // String newEntry = editText.getText().toString();
 
         //ячейка, которая была нажата (cella che è stato cliccato)
         int number = Integer.parseInt(((Button) v).getText().toString());
@@ -91,7 +92,7 @@ public class Case3 extends AppCompatActivity implements View.OnClickListener {
             indexEmpty = idxPressBtn;
 
             if (isSolve()) {
-                Toast.makeText(this, "You solved it!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "You solved it! CONGRATULATION", Toast.LENGTH_LONG).show();
             } else
                 textView.setText("Number of moves: " + (++countPressBtn));
         }
@@ -121,32 +122,33 @@ public class Case3 extends AppCompatActivity implements View.OnClickListener {
     }
     //messaggio customizzato
 
-    private void toastMessage (String message){
-        Toast.makeText(this,message , Toast.LENGTH_SHORT).show();
+    private void toastMessage(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
+
     //creata prova per salvare effettuo il parse di n in String
     @SuppressLint("SetTextI18n")
     private void salvaGame(int n) {
         String parsataIntN = String.valueOf(n);
         boolean insertData = mSaveGame.salvaGame(parsataIntN);
-        if (insertData){
-            toastMessage ("Salvataggio completato");
-        }
-        else{
+        if (insertData) {
+            toastMessage("Salvataggio completato");
+        } else {
             toastMessage("Error Save not succesfully");
         }
     }
+
     //creata prova per caricare
     @SuppressLint("SetTextI18n")
     private void caricaGame() {
         Cursor data = mSaveGame.caricaGame();
         ArrayList<String> listData = new ArrayList<>();
-        while(data.moveToNext()){
+        while (data.moveToNext()) {
 
             //prova questa istruzione cerca nella COL2 dei buttons
             listData.add(data.getString(1));
         }
-        ListAdapter adapter= new ArrayAdapter<>(this, android.R.layout.activity_list_item, listData);
+        ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.activity_list_item, listData);
         mListView.setAdapter(adapter);
     }
 
@@ -169,9 +171,9 @@ public class Case3 extends AppCompatActivity implements View.OnClickListener {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         startNewGame();
-
-        salvaGame(n);
-        caricaGame();
+    // le opzioni sulla scrollbar in alto orizzontale
+     //   salvaGame(n);
+      //  caricaGame();
         return super.onOptionsItemSelected(item);
     }
 }
