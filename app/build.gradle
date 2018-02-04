@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+// Create a variable called keystorePropertiesFile, and initialize it to your
+// keystore.properties file, in the rootProject folder.
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+// Initialize a new Properties() object called keystoreProperties.
+def keystoreProperties = new Properties()
+// Load your keystore.properties file into the keystoreProperties object.
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
+    signingConfigs {
+        config {
+            keyAlias 'MyAndroidKeyPuzzleFifteen'
+            keyPassword 'qwerty00'
+            storeFile file('C:/Users/Alex/Desktop/fonts per App/firma per generare apk/puzzlefifteen.jks')
+            storePassword 'qwerty00'
+        }
+    }
+    defaultConfig {
+        applicationId "redmcrosco.alex.puzzlefifteen"
+        minSdkVersion 19
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        dependencies {
+            compile fileTree(dir: 'libs', include: ['*.jar'])
+            testCompile 'junit:junit:4.12'
+            compile 'com.android.support:appcompat-v7:24.2.1'
+            compile 'com.android.support:recyclerview-v7:24.2.1'
+            compile 'com.google.android.gms:play-services:10.2.1'
+            compile 'com.google.android.gms:play-services-games:10.2.1'
+        }
+    }
+    productFlavors {
+        free {
+            minSdkVersion 19
+            signingConfig signingConfigs.config
+        }
+    }
+}
+dependencies {
+}
