@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Case3"
+    android:background="@drawable/sfondo00">
+
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/gridLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:columnCount="4"
+        android:rowCount="4"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@android:color/transparent"
+        >
+
+        <Button
+            android:text="1"
+            android:layout_gravity="center"
+            android:layout_width="55dp"
+            android:id="@+id/button"
+            android:background="@drawable/graybutton00"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_row="0"
+            android:layout_column="0" />
+        <Button
+            android:text="2"
+            android:layout_gravity="center"
+            android:layout_width="55dp"
+            android:id="@+id/button2"
+            android:background="@drawable/graybutton00"
+            style="@style/Base.Widget.AppCompat.Button"
+            android:layout_row="0"
+            android:layout_column="1" />
+        <Button
+            android:text="3"
+            android:layout_gravity="center"
+            android:layout_width="55dp"
+            android:background="@drawable/graybutton00"
+            android:id="@+id/button3"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_row="0"
+            android:layout_column="2" />
+
+        <Button
+            android:text="4"
+            android:layout_gravity="center"
+            android:layout_width="55dp"
+            android:background="@drawable/graybutton00"
+            android:id="@+id/button4"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_row="1"
+            android:layout_column="0" />
+
+        <Button
+            android:text="5"
+            android:background="@drawable/graybutton00"
+            android:id="@+id/button5"
+            android:layout_gravity="center"
+            android:layout_width="55dp"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_row="1"
+            android:layout_column="1" />
+
+        <Button
+            android:text="6"
+            android:id="@+id/button6"
+            android:layout_gravity="center"
+            android:layout_width="55dp"
+            android:background="@drawable/graybutton00"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_row="1"
+            android:layout_column="2" />
+
+        <Button
+            android:text="7"
+            android:layout_gravity="center"
+            android:layout_width="55dp"
+            android:background="@drawable/graybutton00"
+            android:id="@+id/button7"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_row="2"
+            android:layout_column="0" />
+
+        <Button
+            android:text="8"
+            android:id="@+id/button8"
+            android:layout_gravity="center"
+            android:layout_width="55dp"
+            android:background="@drawable/graybutton00"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_row="2"
+            android:layout_column="1" />
+
+        <Button
+
+            android:id="@+id/button9"
+            android:layout_gravity="center"
+            android:layout_width="55dp"
+            android:background="@drawable/graybutton00"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_row="2"
+            android:layout_column="2" />
+
+        <TextView
+            android:textColor="#030303"
+            android:layout_marginTop="20dp"
+            android:id="@+id/textView"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="4"
+            android:text="Number of moves: 0"
+            android:textAlignment="center"
+            android:textSize="17dp"/>
+    </GridLayout>
+    <!--  commentato in futuro saranno i button save e load
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/buttonSave"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOAD"
+            android:id="@+id/buttonLoad"
+            android:layout_below="@+id/buttonSave"
+            android:layout_alignParentStart="true" />
+    -->
+</RelativeLayout>
