@@ -1,9 +1,9 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Directory 'C:\Users\Alex\Desktop\GoogleDriveAPI-master'" />
-    <option name="defaultScopeName" value="Directory 'C:\Users\Alex\Desktop\GoogleDriveAPI-master'" />
+    <option name="customScope" value="Project 'NewFifteen'" />
+    <option name="defaultScopeName" value="Project 'NewFifteen'" />
     <option name="localWholeWordsOnly" value="true" />
     <option name="LOCAL_WHOLE_WORDS_ONLY" value="true" />
-    <option name="SEARCH_SCOPE" value="Directory 'C:\Users\Alex\Desktop\GoogleDriveAPI-master'" />
+    <option name="SEARCH_SCOPE" value="Project 'NewFifteen'" />
   </component>
 </application>
