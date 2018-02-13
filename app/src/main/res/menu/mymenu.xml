@@ -4,9 +4,10 @@
     <!-- "Mark Favorite", should appear as action button if possible -->
     <item
         android:id="@+id/newGame"
+        android:icon="@drawable/restart"
         android:title="New Game"
-                />
-   <!-- <item
+        />
+    <item
         android:id="@+id/saveGame"
         android:icon="@drawable/ic_cast_dark"
         android:title="Save Game"
@@ -16,7 +17,7 @@
         android:icon="@drawable/ic_cast_light"
         android:title="Load Game"
         />
--->
+
     <!--&lt;!&ndash; Settings, should always be in the overflow &ndash;&gt;-->
     <!--<item android:id="@+id/action_settings"-->
     <!--android:title="@string/action_settings"-->

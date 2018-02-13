@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/relativeLayout"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Case5">
-
 
 
         <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -26,7 +23,8 @@
             android:layout_alignWithParentIfMissing="false"
             android:clickable="false"
             android:useDefaultMargins="false"
-           >
+            android:transitionGroup="false"
+            android:touchscreenBlocksFocus="false">
 
             <Button
                 android:text="1"
@@ -299,4 +297,8 @@
                 android:textSize="17dp"/>
         </GridLayout>
 
-    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
