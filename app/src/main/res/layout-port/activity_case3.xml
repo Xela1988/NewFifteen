@@ -120,7 +120,26 @@
             android:text="Number of moves: 0"
             android:textAlignment="center"
             android:textSize="17dp"/>
+
     </GridLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/buttonSave"
+        android:layout_below="@+id/gridLayout3"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="31dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load"
+        android:id="@+id/buttonLoad"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/buttonSave"
+        android:layout_alignParentStart="true" />
 
     <!-- commentato in futuro saranno i button save e load
     <Button

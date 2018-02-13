@@ -1,30 +1,24 @@
 apply plugin: 'com.android.application'
-
-
 // Create a variable called keystorePropertiesFile, and initialize it to your
 // keystore.properties file, in the rootProject folder.
 def keystorePropertiesFile = rootProject.file("keystore.properties")
-
 // Initialize a new Properties() object called keystoreProperties.
 def keystoreProperties = new Properties()
-
 // Load your keystore.properties file into the keystoreProperties object.
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
-
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.2"
     signingConfigs {
         config {
-            keyAlias keystoreProperties['keyAlias']
-            keyPassword keystoreProperties['keyPassword']
-            storeFile file(keystoreProperties['storeFile'])
-            storePassword keystoreProperties['storePassword']
+            keyAlias 'MyAndroidKeyPuzzleFifteen'
+            keyPassword 'qwerty00'
+            storeFile file('C:/Users/Alex/Desktop/fonts per App/firma per generare apk/puzzlefifteen.jks')
+            storePassword 'qwerty00'
         }
     }
-
     defaultConfig {
-        applicationId "com.example.alex.newfifteen"
+        applicationId "alex.newfifteen"
         minSdkVersion 19
         targetSdkVersion 24
         versionCode 1
@@ -42,9 +36,8 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'),
                     'proguard-rules.pro'
-
+            signingConfig signingConfigs.config
         }
-
         dependencies {
             compile fileTree(dir: 'libs', include: ['*.jar'])
             testCompile 'junit:junit:4.12'
@@ -52,7 +45,14 @@ android {
             compile 'com.android.support:recyclerview-v7:24.2.1'
             compile 'com.google.android.gms:play-services:10.2.1'
             compile 'com.google.android.gms:play-services-games:10.2.1'
-
         }
     }
+    productFlavors {
+        free {
+            minSdkVersion 19
+            signingConfig signingConfigs.config
+        }
+    }
+}
+dependencies {
 }

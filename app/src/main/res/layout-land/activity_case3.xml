@@ -121,21 +121,37 @@
             android:textAlignment="center"
             android:textSize="17dp"/>
     </GridLayout>
-<!--  commentato in futuro saranno i button save e load
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Save"
         android:id="@+id/buttonSave"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/gridLayout3"
         android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LOAD"
+        android:text="Load"
         android:id="@+id/buttonLoad"
-        android:layout_below="@+id/buttonSave"
+        android:layout_above="@+id/buttonSave"
         android:layout_alignParentStart="true" />
--->
+    <!--  commentato in futuro saranno i button save e load
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/buttonSave"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOAD"
+            android:id="@+id/buttonLoad"
+            android:layout_below="@+id/buttonSave"
+            android:layout_alignParentStart="true" />
+    -->
 </RelativeLayout>
