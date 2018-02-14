@@ -20,14 +20,24 @@
         android:layout_gravity="center_horizontal"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
-
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/ringraziamenti"
+        android:clickable="true"
+        android:background="@drawable/logoroscake00"
+        android:layout_above="@+id/textView2"
+        android:layout_centerHorizontal="true" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#aa290202"
+        android:textSize="20dp"
+        android:textStyle="bold"
         android:text="Red McRosco Productions"
-        android:id="@+id/textView2"
-        android:textColor="#aa450000"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView2" />
+
 </RelativeLayout>

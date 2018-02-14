@@ -1,25 +1,21 @@
 package alex.newfifteen;
 
+import android.app.Dialog;
+import android.content.Context;
+import android.content.Intent;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.ImageView;
 
-        import android.annotation.SuppressLint;
-        import android.app.Activity;
-        import android.content.Intent;
-        import android.support.v7.app.AppCompatActivity;
-        import android.os.Bundle;
-        import android.util.Log;
-        import android.view.Menu;
-        import android.view.MenuInflater;
-        import android.view.MenuItem;
-        import android.view.View;
-        import android.widget.Button;
-        import android.widget.GridLayout;
-        import android.widget.TextView;
-        import android.widget.Toast;
-
-        import java.util.Arrays;
-
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
     Button buttonHomeNewGame;
+    Button dialogButton;
+    ImageView thanksgiving;
+    final Context context = this;
 
 
     @Override
@@ -27,10 +23,35 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        buttonHomeNewGame= (Button)findViewById(R.id.buttonHomeNewGame);
+        // dichiaro un ImageView da cliccare la foto con la cake
+        thanksgiving = (ImageView) findViewById(R.id.ringraziamenti);
+//gli imposto un Listener
+        thanksgiving.setOnClickListener(new View.OnClickListener() {
+//invoco necesariamente un metodo on click
+            @Override
+            public void onClick(View v) {
+                //creo l'ggetto Dialog
+                final Dialog dialog = new Dialog(context);
+                //questa row mi serve per non mostrare la toolbar in alto
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                //il setContentView restituisce il layout da far apparire
+                dialog.setContentView(R.layout.dialog_layout);
+                //creo un buttone per tornare indietro e gli imposto il suo metodoonClick
+                Button dialogButton = (Button) dialog.findViewById(R.id.buttonIndietro);
+                dialogButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
+            }});
 
-        buttonHomeNewGame.setOnClickListener( new View.OnClickListener()
-        {
+
+
+        buttonHomeNewGame = (Button) findViewById(R.id.buttonHomeNewGame);
+
+        buttonHomeNewGame.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -38,11 +59,10 @@ public class MainActivity extends Activity {
                 // Intent code for open new activity through intent.
 
                 Intent intent = new Intent(MainActivity.this, Scelta.class);
-            //    Intent intent1= new Intent(MainActivity.this, Case5.class);
+                //    Intent intent1= new Intent(MainActivity.this, Case5.class);
                 startActivity(intent);
-             //   startActivity(intent1);
+                //   startActivity(intent1);
 
-            }});
-    }
-
-}
+            }
+        });
+    }}

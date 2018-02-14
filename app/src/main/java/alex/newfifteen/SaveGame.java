@@ -22,31 +22,28 @@ import java.util.HashMap;
  */
 public class SaveGame  extends SQLiteOpenHelper {
 
-    public static String AUTHORITY = "alex.newfifteen.SaveGame";
-    public static Uri CONTENT_URI_PUZZLES = Uri.parse("content://" + AUTHORITY + "/puzzlefifteen");
-    private static final String TAG = "PuzzleNewFifteenProvider";
+
+
+     private static final String TAG = "PuzzleNewFifteenProvider";
 
     /**
      * This class helps open, create, and upgrade the database file.
      */
-    private static final String DATABASE_NAME = "newFifteenSave.db";
-   // private static final int DATABASE_VERSION = 1; // 7.6 lessons
-    private static final String TABLE_NAME = "listFifteen_data";
+    private static final String DATABASE_NAME = "newPuzzleFifteenSave.db";
+    public static final String TABLE_NAME = "listPuzzle";
 
     private static HashMap<String, String> sGamesProjectionMap;
     public static final String COL1 = "ID";
     public static final String COL2 = "ITEM1";
-    /*  protected static final int TYPE_PUZZLE = 1;
-      protected static final int TYPE_PRACTICE = 2;
-      public static final String COL_ID = "_ID";
-      public static final String COL_PGN = "PGN";
-      public static final String COL_TYPE = "PUZZLE_TYPE";
-      protected static UriMatcher sUriMatcher;
-      */
+    
     public static final String[] COLUMNS = {
             COL1,
             COL2,
     };
+
+    public SaveGame(Context context) {
+        super(context, DATABASE_NAME, null, 1);
+    }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -76,9 +73,7 @@ public class SaveGame  extends SQLiteOpenHelper {
         }
     }
 
-    public SaveGame(Context context) {
-        super(context, DATABASE_NAME, null, 1);
-    }
+
 
     public Cursor caricaGame() {
         SQLiteDatabase db = this.getWritableDatabase();

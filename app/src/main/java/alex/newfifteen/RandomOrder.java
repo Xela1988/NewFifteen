@@ -56,7 +56,8 @@ public class RandomOrder {
             if (array[i] == 0) rowEmpty = (i - i % n) / n + 1;
         }
 
-        //если сумма четная, то решение есть. Иначе комбинация не соберется (se la somma è pari, allora la soluzione è. In caso contrario, la combinazione non incontrerà)
+        //если сумма четная, то решение есть. Иначе комбинация не соберется (se la somma è pari, allora è la soluzione. In caso contrario,
+        // //la combinazione non è giusta)
         return (countItem + rowEmpty) % 2 == 0;
     }
 }

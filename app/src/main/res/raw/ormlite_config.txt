@@ -1,0 +1,39 @@
+# --table-start--
+dataClass=com.example.basil.dicelauncher.Sacchetta
+tableName=sacchette
+# --table-fields-start--
+# --field-start--
+fieldName=counter
+columnName=sacchetta_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=nomeProprietario
+columnName=nome_proprietario
+# --field-end--
+# --field-start--
+fieldName=setDiDadiCollection
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+ 
+#################################
+# --table-start--
+dataClass=com.example.basil.dicelauncher.Dice
+tableName=dadi
+# --table-fields-start--
+# --field-start--
+fieldName=id
+# --field-end--
+# --field-start--
+fieldName=facce
+# --field-end--
+# --field-start--
+fieldName=sacchetta
+columnName=sacchetta_id
+foreign=true
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################

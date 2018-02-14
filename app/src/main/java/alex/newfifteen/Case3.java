@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridLayout;
+import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ListAdapter;
@@ -34,6 +35,7 @@ public class Case3 extends AppCompatActivity implements View.OnClickListener {
     public String franco[];
     // queste due rows mi servono per salvare
     protected Button buttonSave;
+    // richiamo la classe e la nomino mSaveGame
     SaveGame mSaveGame;
     private Button buttonLoad;
     private ListView mListView;
@@ -49,6 +51,10 @@ public class Case3 extends AppCompatActivity implements View.OnClickListener {
     private Button button7;
     private Button button8;
     private Button button9;
+
+    private ListView listView;
+
+    private SimpleCursorAdapter adapter;
 
 
     @Override
@@ -83,18 +89,18 @@ public class Case3 extends AppCompatActivity implements View.OnClickListener {
 
         //ho impostato due Listener il primo per salavare utilizzando il method salvaGame
         // e il secondo per caricare usa il metodo caricaGame
-        buttonSave.setOnClickListener(new View.OnClickListener(){
+        buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 salvaGame(indexes);
-             //   Intent intent = new Intent(Case3.this, Case3.class );
+                //   Intent intent = new Intent(Case3.this, Case3.class );
             }
         });
-        buttonLoad.setOnClickListener(new View.OnClickListener(){
+        buttonLoad.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 caricaGame();
-               Intent intent = new Intent(Case3.this, Case3.class );
+                Intent intent = new Intent(Case3.this, Case3.class);
             }
         });
 
@@ -115,7 +121,6 @@ public class Case3 extends AppCompatActivity implements View.OnClickListener {
 
         textView = (TextView) findViewById(R.id.textView);
     }
-
 
 
     @Override
@@ -146,11 +151,6 @@ public class Case3 extends AppCompatActivity implements View.OnClickListener {
                 case R.id.buttonLoad:
                     caricaGame();
             }
-
-
-
-
-
             if (isSolve()) {
                 Toast.makeText(this, "You solved it! CONGRATULATION", Toast.LENGTH_LONG).show();
             } else
@@ -162,7 +162,6 @@ public class Case3 extends AppCompatActivity implements View.OnClickListener {
     private void swapButton(Button pressButton, Button emptyButton) {
         emptyButton.setText(pressButton.getText());
         emptyButton.setVisibility(View.VISIBLE);
-
         pressButton.setVisibility(View.INVISIBLE);
     }
 
@@ -203,8 +202,6 @@ public class Case3 extends AppCompatActivity implements View.OnClickListener {
     }
 
 
-
-
     //creata prova per caricare
     @SuppressLint("SetTextI18n")
     private void caricaGame() {
@@ -240,9 +237,9 @@ public class Case3 extends AppCompatActivity implements View.OnClickListener {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-            startNewGame();
-            salvaGame(this.indexes);
-            caricaGame();
+        startNewGame();
+        salvaGame(this.indexes);
+        caricaGame();
 
 
         // le opzioni sulla scrollbar in alto orizzontale
