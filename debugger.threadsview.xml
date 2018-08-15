@@ -1,0 +1,7 @@
+<application>
+  <component name="ThreadsViewSettings">
+    <option name="SHOW_THREAD_GROUPS" value="true" />
+    <option name="SHOW_SOURCE_NAME" value="true" />
+    <option name="SHOW_SYNTHETIC_FRAMES" value="false" />
+  </component>
+</application>
