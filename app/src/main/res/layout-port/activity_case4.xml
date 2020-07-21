@@ -6,9 +6,6 @@
     tools:context=".Case4"
     android:background="@drawable/sfondo04">
 
-
-
-
     <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/gridLayout4"
         android:layout_width="wrap_content"
@@ -16,10 +13,10 @@
         android:orientation="horizontal"
         android:columnCount="4"
         android:rowCount="5"
-        android:layout_centerVertical="true"
+        android:layout_marginTop="94dp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:backgroundTint="@android:color/transparent"
-        >
+        android:backgroundTint="@android:color/transparent">
 
         <Button
             android:text="1"
@@ -134,7 +131,7 @@
             android:layout_width="55dp"
             style="@style/Widget.AppCompat.Button" />
         <TextView
-            android:textColor="#ffffff"
+            android:textColor="#fffdfd"
             android:layout_marginTop="20dp"
             android:id="@+id/textView"
             android:layout_row="4"
@@ -146,6 +143,8 @@
             android:textAlignment="center"
             android:textSize="17dp"/>
     </GridLayout>
+
+
 
 
 

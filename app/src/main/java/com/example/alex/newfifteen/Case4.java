@@ -2,7 +2,7 @@ package com.example.alex.newfifteen;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -17,11 +17,11 @@ import android.widget.Toast;
  * Created by Alex on 22/10/2017.
  */
 public class Case4 extends AppCompatActivity implements View.OnClickListener {
-    private static final int n = 4; // размерность поля (campo dimensione): n*n
+    private static final Integer n = 4; // размерность поля (campo dimensione): n*n
     private Button[] buttons; //массив ячеек (array di celle)
-    private int indexEmpty; //индекс пустой ячейки (indice cella vuota)
-    private int indexes[]; //хранит индексы ячеек (negozi indici cella)
-    private int countPressBtn = 0; //хранит кол-во ходов (memorizza i numero di colpi)
+    private Integer indexEmpty; //индекс пустой ячейки (indice cella vuota)
+    private Integer indexes[]; //хранит индексы ячеек (negozi indici cella)
+    private Integer countPressBtn = 0; //хранит кол-во ходов (memorizza i numero di colpi)
     private TextView textView; //выводит кол-во ходов (esso mostra il numero di colpi)
 
     @Override
@@ -30,13 +30,13 @@ public class Case4 extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_case4);
 
         buttons = new Button[n * n];
-        indexes = new int[n * n];
-        int[] numbers = RandomOrder.getShuffleArray(0, n * n, n); //массив с числами в случайном порядке (una serie di numeri casuali)
+        indexes = new Integer[n * n];
+        Integer[] numbers = RandomOrder.getShuffleArray(0, n * n, n); //массив с числами в случайном порядке (una serie di numeri casuali)
 
         GridLayout gridLayout = (GridLayout) findViewById(R.id.gridLayout4);
 
         Button btn;
-        for (int i = 0; i < n * n; i++) {
+        for (Integer i = 0; i < n * n; i++) {
             btn = (Button) gridLayout.getChildAt(i);
             if (numbers[i] == 0) {
                 btn.setVisibility(View.INVISIBLE);
@@ -54,10 +54,10 @@ public class Case4 extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         //ячейка, которая была нажата (cella che è stato cliccato)
-        int number = Integer.parseInt(((Button) v).getText().toString());
+        Integer number = Integer.parseInt(((Button) v).getText().toString());
 
         //индекс ячейки (indice delle celle)
-        int idxPressBtn = indexes[number];
+        Integer idxPressBtn = indexes[number];
 
         if (((idxPressBtn == indexEmpty - 1) & ((idxPressBtn + 1) % n != 0)) ||
                 ((idxPressBtn == indexEmpty + 1) & (idxPressBtn % (n) != 0)) ||
@@ -84,9 +84,9 @@ public class Case4 extends AppCompatActivity implements View.OnClickListener {
 
     @SuppressLint("SetTextI18n")
     private void startNewGame() {
-        int[] numbers = RandomOrder.getShuffleArray(0, n * n, n);
+        Integer[] numbers = RandomOrder.getShuffleArray(0, n * n, n);
         buttons[indexEmpty].setVisibility(View.VISIBLE);
-        for (int i = 0; i < n * n; i++) {
+        for (Integer i = 0; i < n * n; i++) {
             indexes[numbers[i]] = i;
             if (numbers[i] != 0)
                 buttons[i].setText(String.valueOf(numbers[i]));
@@ -99,7 +99,7 @@ public class Case4 extends AppCompatActivity implements View.OnClickListener {
     }
 
     private boolean isSolve() {
-        for (int i = 1; i < indexes.length - 1; i++)
+        for (Integer i = 1; i < indexes.length - 1; i++)
             if (indexes[i] != i - 1) return false;
 
         return true;

@@ -5,7 +5,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Spaccaquindici"
+        android:label="Puzzle Fifteen"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
@@ -18,23 +18,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:label="Sfida NewEight"
-            android:name=".Case3" >
+            android:label="Challenge NewEight"
+            android:name=".Case3"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:label="Challenge NewFifteen"
-            android:name=".Case4" >
+            android:name=".Case4"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:label="Challenge NewTwentyfour"
-            android:name=".Case5" >
+            android:name=".Case5"
+            android:screenOrientation="portrait">
         </activity>
         <activity
-            android:label="Sfida NewThirtyfive"
-            android:name=".Case6" >
+            android:label="Challenge NewThirtyfive"
+            android:name=".Case6"
+            android:screenOrientation="portrait">
         </activity>
         <activity
-            android:label="Difficoltà"
+            android:label="Choice Difficult"
             android:name=".Scelta" >
         </activity>
 
