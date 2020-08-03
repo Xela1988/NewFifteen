@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Case5"
-    android:background="@drawable/sfondo02">
+    android:background="@drawable/sfondo02"
+    tools:ignore="MissingDefaultResource">
 
 
     <TextView

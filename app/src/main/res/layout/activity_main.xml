@@ -1,43 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeLayout"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:background="@drawable/sfondo06"
-    >
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bluebutton00"
-        android:text="New Game"
-        android:id="@+id/buttonHomeNewGame"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_gravity="center_horizontal"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/ringraziamenti"
-        android:clickable="true"
-        android:background="@drawable/logoroscake00"
-        android:layout_above="@+id/textView2"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/logoPuzzle"
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/logo_puzzle_01" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#aa290202"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:text="Red McRosco Productions"
+    <ImageView
+        android:id="@+id/logoFifteen"
+        android:layout_width="match_parent"
+        android:layout_height="233dp"
+        android:layout_below="@+id/logoPuzzle"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-142dp"
+        android:background="@drawable/logo_fifteen_00" />
+
+
+    <ImageView
+        android:id="@+id/ringraziamenti"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/logoroscake02"
+        android:clickable="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/textView2" />
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="78dp">
+
+
+        <Button
+            android:id="@+id/buttonHomeNewGame"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:width="185dp"
+            android:height="155dp"
+            android:background="@drawable/bluebutton00"
+            android:text="New Game"
+            android:textColor="@android:color/white"
+            android:textSize="36sp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Red McRosco Productions"
+        android:textColor="#aa290202"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 </RelativeLayout>

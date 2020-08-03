@@ -5,7 +5,7 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Case5"
+    tools:context="redmcrosco.alex.puzzlefifteen.Case5"
     android:background="@drawable/sfondo02">
 
 

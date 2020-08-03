@@ -4,9 +4,20 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Scelta"
-    android:background="@drawable/sfondo05">
+    android:background="@drawable/sfondo05"
+    tools:ignore="MissingDefaultResource">
 
-    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Choice the table"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30dp" />
+
+    <GridLayout
         android:id="@+id/gridLayoutSceltaMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,52 +39,56 @@
             android:id="@+id/buttonScelta3"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_column="0"
-            android:layout_gravity="center_horizontal"
+            android:layout_height="85dp"
             android:layout_row="0"
+            android:layout_column="0"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
             android:background="@drawable/graybutton00"
-            android:text="3*3" />
+            android:text="3*3"
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/buttonScelta4"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="85dp"
+            android:layout_row="0"
+            android:layout_column="1"
             android:layout_alignTop="@+id/buttonScelta3"
             android:layout_centerHorizontal="true"
-            android:layout_column="1"
             android:layout_gravity="center_horizontal"
-            android:layout_row="0"
             android:background="@drawable/greenbutton00"
-            android:text="4*4" />
+            android:text="4*4"
+            android:textSize="24sp" />
 
 
         <Button
             android:id="@+id/buttonScelta5"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="85dp"
+            android:layout_row="1"
+            android:layout_column="0"
             android:layout_alignTop="@+id/buttonScelta3"
             android:layout_centerHorizontal="true"
-            android:layout_column="0"
             android:layout_gravity="center_horizontal"
-            android:layout_row="1"
             android:background="@drawable/yellowbutton00"
-            android:text="5*5" />
+            android:text="5*5"
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/buttonScelta6"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/buttonScelta4"
-            android:layout_column="1"
-            android:layout_gravity="center_horizontal"
+            android:layout_height="85dp"
             android:layout_row="1"
+            android:layout_column="1"
+            android:layout_alignTop="@+id/buttonScelta4"
+            android:layout_gravity="center_horizontal"
             android:layout_toEndOf="@+id/buttonScelta4"
             android:background="@drawable/redbutton00"
-            android:text="6*6" />
+            android:text="6*6"
+            android:textSize="24sp" />
     </GridLayout>
 </RelativeLayout>

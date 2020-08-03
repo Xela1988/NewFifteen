@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Case5">
+    tools:context="redmcrosco.alex.puzzlefifteen.Case5">
 
 
         <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
